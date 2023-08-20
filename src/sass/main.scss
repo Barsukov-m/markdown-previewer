@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables';
+@import './mixins';
+
+.Editor {
+	textarea {
+		font-family: 'Courier New', Courier, monospace;
+		resize: horizontal;
+		overflow: auto;
+	}
+}
+
+.Preview {
+	font-size: 16px;
+	line-height: 1.5;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 24px;
+		margin-bottom: 16px;
+		font-weight: 600;
+		line-height: 1.25;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	p {
+		margin-top: 16px;
+	}
+
+	a {
+		color: #0366d6;
+		text-decoration: none;
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	code {
+		font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+		font-size: 85%;
+		padding: 0.2em 0.4em;
+		margin: 0;
+		background-color: rgba(27, 31, 35, 0.05);
+		border-radius: 6px;
+	}
+
+	pre {
+		padding: 16px;
+		overflow: auto;
+		font-size: 85%;
+		line-height: 1.45;
+		background-color: #f6f8fa;
+		border-radius: 6px;
+	}
+
+	pre code {
+		padding: 0;
+		margin: 0;
+		font-size: 100%;
+		background-color: transparent;
+		border: 0;
+	}
+
+	img {
+		max-width: 100%;
+		box-sizing: content-box;
+		background-color: #fff;
+		border: 1px solid rgba(27, 31, 35, 0.15);
+		border-radius: 3px;
+	}
+
+	blockquote {
+		padding: 0 1em;
+		margin: 0;
+		color: #6a737d;
+		border-left: 0.25em solid #dfe2e5;
+	}
+
+	ul,
+	ol {
+		margin: 1em 0;
+		padding-left: 1em;
+		list-style-position: outside;
+
+		& ul,
+		& ol {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			padding-left: 1.5em;
+		}
+
+		li {
+			margin-bottom: 0.5em;
+			line-height: 1.5;
+		}
+	}
+
+	ul {
+		list-style-type: disc;
+
+		ul {
+			list-style-type: circle;
+
+			ul {
+				list-style-type: square;
+			}
+		}
+	}
+
+	ol {
+		list-style-type: decimal;
+
+		ol {
+			list-style-type: lower-alpha;
+
+			ol {
+				list-style-type: lower-roman;
+			}
+		}
+	}
+
+	ul,
+	ol {
+		padding-left: 2em;
+	}
+
+	table {
+		width: 100%;
+		display: block;
+		overflow: auto;
+		border-spacing: 0;
+		border-collapse: collapse;
+	}
+
+	table th {
+		font-weight: 600;
+	}
+
+	table td,
+	table th {
+		padding: 6px 13px;
+		border: 1px solid #dfe2e5;
+	}
+}
